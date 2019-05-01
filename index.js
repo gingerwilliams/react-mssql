@@ -23,10 +23,11 @@ app.get("/projectlist", function(req, res) {
 
             // send records as a response
             res.send(recordset);
+            sql.close();
         });
     });
 });
 
 var server = app.listen(5000, function() {
-    console.log("Server is running.. http://localhost:5000");
+    console.log("Backend Server is running.. http://localhost:5000");
 });
